@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15Puzzle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="15puzzle.css">
+</head>
+
+<body>
+
+    <div class="header">15 Puzzle Game
+        <div class="puzimg">
+            <img src="./15puz.jpg" style="width: 70px">
+        </div>
+    </div>
+    
+    <div class="container d-flex justify-content-center align-items-center" >
+
+        <div id="inputlenghts" class="form-group" >
+            <label style="margin:1rem;">Enter the height of the board:
+                <input type="number" id="getheight" value=4 class="form-control">
+            </label>
+            <label style="margin:1rem;">Enter the width of the board:
+                <input type="number" id="getwidth" value=4 class="form-control">
+            </label>
+            <button style="margin:1rem;" class="btn btn-lg btn-primary" onclick=inputlengths()>Let's
+                play!</button>
+        </div>
+        <div id="stats" class="stats form-group">
+            <label>Time:
+                <span id="time">
+
+                </span>
+            </label>
+
+            <label>Number of Moves :
+                <span id="moves">
+
+                </span>
+            </label>
+
+        </div>
+
+        <div id="board-container"></div>
+
+        <div id="won" style="display:none" class="stats"></div>
+
+        <button id="reset" style="padding:1rem;" onclick=reset() class="btn btn-lg btn-outline-info">Reset</button>
+        <button id="clearstorage" style="padding:1rem;" onclick=clearrecords() class="btn btn-lg btn-success">Clear Records</button>
+        
+        <div id="instructions" class="genMsg">
+            <p>
+                Move the tiles to arrange the numbers in increasing order from 1 to <span id="num"></span>
+            </p>
+        </div>
+        <div id="oldstats" class="oldstat">
+            
+            <label><b>Best Time</b>:
+                <span id="besttime">
+
+                </span>
+            </label>
+
+            <label><b>Least number of Moves</b> :
+                <span id="leastmoves">
+
+                </span>
+            </label>
+        </div>
+    </div>
+</body>
+<script src="15puzzle.js"></script>
+
+</html>

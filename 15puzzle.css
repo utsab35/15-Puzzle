@@ -1,0 +1,168 @@
+:root {
+    --length: 6rem;
+}
+body{
+    background-color: #efefef;
+}
+
+.header {
+    background-color: rgb(16, 41, 56);
+    font-size: 36px;
+    padding: 20px 30px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(246, 255, 71);
+}
+.puzimg{
+    margin-right: 34cm;
+}
+
+.oldstat{
+    color: rgb(214, 8, 8);
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: none;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#inputlenghts{
+    color: black;
+    padding:9rem;
+    margin:1rem;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.genMsg{
+    display: none;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.btn-primary{
+    background-color: #55c732;
+}
+
+.btn-primary:hover{
+    background-color: #1d5b0a;
+}
+
+#reset{
+    background-color: rgb(0, 255, 255);
+    color: black;
+}
+
+#reset:hover{
+    background-color: #1ec8ee;
+}
+
+
+#clearstorage{
+    margin-top: 20px;
+    display: none;
+}
+
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.stats{
+    color: chocolate;
+    font-size: 1.2rem;
+    display: none;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+}
+.stats label{
+    color:rgb(125, 73, 210);
+    padding:0.4rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.4rem;
+}
+
+.stats label span{
+    color:#838528;
+    display:inline;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.6rem;
+}
+#board-container{
+    display: none;  /* at first the board is not visible */
+    justify-content: center;
+    background-color: rgb(96, 185, 205);
+    align-items: center;
+    flex-direction: column;
+    margin:1rem;
+}
+#won{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#reset{
+    display: none;
+}
+.result{
+    color:rgb(129, 45, 226);
+    font-size: 1.5rem;
+}
+.container{
+    display:flex;
+    margin:auto auto;
+    padding:2rem;
+    width:fit-content;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.cell {
+    height: var(--length);
+    width:var(--length);
+    border: 0.3px rgb(0,255,255) solid;
+    border-radius: 0.5rem;
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #113606;
+    padding:0.3rem;
+    color:#00ffff;
+    font-size: 2.5rem;
+    font-style: bold;
+    font-family: sans-serif;
+}
+
+@media(max-width:340px)
+{
+    :root{
+        --length:3rem;
+    }
+    .cell{
+        font-size:1.4rem;
+    }
+}
+@media(max-width:600px)
+{
+    :root{
+        --length:4rem;
+    }
+}
+#oldstats{
+     display: flex;
+}
